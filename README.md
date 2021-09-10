@@ -10,9 +10,9 @@
 
 https://beta.docs.qmk.fm/tutorial/newbs_getting_started
 
-## Step 2. Create or find your keyboard. 
+## Step 2. Place files of choosen artseyio type (left or right-handed) in QMK `keyboards/` directory. 
 
-Create or find your keyboard as usual for making a QMK keymap. 
+Copy choosen type folder to `<QMK_home>/keyboards/`
 
 ## Step 3. Make sure Combos and Mousekeys are enabled in rules.h of your keyboard.  
 Add these lines to your `rules.mk`
@@ -30,17 +30,19 @@ These files are found in either the /left_hand or /right_hand folder of this rep
 	keymap_combo.h
 	macros.c
 
-## Step 5. Create your keymap.   
-### ADD Includes
+## Step 5. Customize your keymap if you need it.   
+### Make sure you have all necessary Includes
 Include this somewhere near the top of your keymap:  
 
 	#include "artsey.h"
 	#include "keymap_combo.h"
 	#include "artsey.c"
 
-### Create Base, Number, Nav, Symbol, Bracket, Mouse, and Custom Layer  
+### Base, Number, Nav, Symbol, Bracket, Mouse, and Custom Layers. 
 
-The 7 layers are `_A_BASE`,`_A_NUM`,`_A_NAV`,`_A_SYM`,`_A_BRAC`,`_A_MOU`,and `_A_CUSTOM`. You will need to create these 7 new layers on your keyboard and map the 8 artsey keycodes on each layer. The keycodes are of the form:
+There are 7 default layers: `_A_BASE`,` _A_NUM`,` _A_NAV`,` _A_SYM`,` _A_BRAC`,` _A_MOU` and `_A_CUSTOM`. 
+
+You will need to create these 7 new layers on your keyboard and map the 8 artsey keycodes on each layer. The keycodes are of the form:
 
 	A_LAYER_A
 	A_LAYER_R
