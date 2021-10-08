@@ -1,7 +1,13 @@
 #pragma once
 #include "quantum.h"
 
-
+#define LAYOUT( \
+	K00, K01, K02, K03, \
+	K10, K11, K12, K13  \
+) { \
+	{ K00,   K01,   K02,   K03 }, \
+	{ K10,   K11,   K12,   K13 }  \
+}
 
 enum layers {
   _A_BASE = 0,
@@ -181,12 +187,12 @@ A_MOU_E = KC_MS_LEFT,
 A_MOU_Y = KC_MS_DOWN,
 A_MOU_I = KC_MS_RIGHT,
 A_MOU_O = KC_PGDN,
-A_CUSTOM_A = KC__MUTE,
+A_CUSTOM_A = KC_AUDIO_MUTE,     // Use KC__VOLDOWN for MacOS/Linux
 A_CUSTOM_R = KC_INS,
-A_CUSTOM_T = KC__VOLUP,
+A_CUSTOM_T = KC_AUDIO_VOL_UP,   // Use KC__MUTE for MacOS/Linux
 A_CUSTOM_S,
 A_CUSTOM_E = KC_RSFT,
 A_CUSTOM_Y = KC_PSCR,
-A_CUSTOM_I = KC__VOLDOWN,
+A_CUSTOM_I = KC_AUDIO_VOL_DOWN, // Use KC__VOLDOWN for MacOS/Linux
 A_CUSTOM_O,
  };

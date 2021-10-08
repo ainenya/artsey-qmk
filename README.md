@@ -42,7 +42,7 @@ Include this somewhere near the top of your keymap:
 
 There are 7 default layers: `_A_BASE`,` _A_NUM`,` _A_NAV`,` _A_SYM`,` _A_BRAC`,` _A_MOU` and `_A_CUSTOM`. 
 
-You will need to create these 7 new layers on your keyboard and map the 8 artsey keycodes on each layer. The keycodes are of the form:
+You will need to make sure these 7 layers are created on your keyboard and the 8 artsey keycodes are maped on each layer. The keycodes are of the form:
 
 	A_LAYER_A
 	A_LAYER_R
@@ -55,7 +55,7 @@ You will need to create these 7 new layers on your keyboard and map the 8 artsey
 	
 ### Full Example
 
-Examples keymaps are avilable in each folder. An example keymap for an 8-key right handed board might look like this:
+Default keymap examples are avalable in each folder. An example keymap for an 8-key right handed board might look like this:
 
 	//REPLACE THIS WITH YOUR KEYBOARD.h 
 	#include "keyboard.h"
